@@ -2,6 +2,13 @@ package com.jade.demo.test;
 
 import java.util.Arrays;
 
+/**
+ * DP问题解决步骤；
+ * 1. 确定状态，建立dp数组，明确dp数组代表的含义
+ * 2. 确定选择，需要求解某一个状态值，确定如何选择才能计算状态值
+ * 3. 根据状态和选择建立状态转移方程。
+ * 4. 根据状态转移方程，确定数组遍历顺序。
+ */
 public class DPDemo {
 
     public static void main(String[] args) {
