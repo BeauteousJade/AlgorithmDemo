@@ -18,14 +18,6 @@ public class FastAndSlowPointerDemo {
             node = node.next;
         }
         System.out.println(testFastAndSlowPointer(head));
-
-        Node newHead = testReverseLink(head);
-        StringBuilder sb = new StringBuilder();
-        while (newHead != null) {
-            sb.append(newHead.value);
-            newHead = newHead.next;
-        }
-        System.out.println(sb);
     }
 
 
@@ -40,21 +32,5 @@ public class FastAndSlowPointerDemo {
             fast = fast.next.next;
         }
         return slow;
-    }
-
-    /**
-     * 链表反转
-     */
-    private static Node testReverseLink(Node node) {
-        Node currentNode = node; // 1
-        Node nextNode = node.next; // 2
-        currentNode.next = null;
-        while (nextNode != null) {
-            Node nextNext = nextNode.next; // 3, 4,5
-            nextNode.next = currentNode; // 3 -> 2 -> 1
-            currentNode = nextNode; // 2, 3
-            nextNode = nextNext; // 3, 4
-        }
-        return currentNode;
     }
 }
